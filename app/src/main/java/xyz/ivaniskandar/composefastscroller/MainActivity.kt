@@ -31,6 +31,7 @@ class MainActivity : ComponentActivity() {
                     val padding = PaddingValues(top = 16.dp, bottom = 36.dp, end = 0.dp)
                     VerticalFastScroller(
                         listState = listState,
+                        topContentPadding = padding.calculateTopPadding(),
                         endContentPadding = padding.calculateEndPadding(LocalLayoutDirection.current)
                     ) {
                         LazyColumn(
